@@ -13,7 +13,16 @@
 // .container is main centered wrapper with a max width of 112.0rem (1120px)
 .container {
 	margin: 0 auto;
-	max-width: 112.0rem;
+	max-width: 50%;
+	padding: 0 2.0rem;
+	position: relative;
+	width: 50%;
+}
+
+// .container is main centered wrapper with a max width of 112.0rem (1120px)
+.post-container {
+	margin: 0 auto;
+	max-width: 100%;
 	padding: 0 2.0rem;
 	position: relative;
 	width: 100%;
@@ -170,6 +179,11 @@
 		&.column-90 {
 			flex: 0 0 90%;
 			max-width: 90%;
+		}
+
+		&.column-100 {
+			flex: 0 0 100%;
+			max-width: 100%;
 		}
 
 		// .column-* vertically aligns an individual .column
