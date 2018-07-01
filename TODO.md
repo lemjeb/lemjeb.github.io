@@ -1,6 +1,3 @@
--- Add floating sidebar to navigate chapters/pages
--- Add next previous buttons to comic pages
--- Refactor post mechanism to just be based on images
--- Add social media links to topbar
--- make a real temp about page/descriptions
--- add real temp art
+-- Add next/prev/top buttons that appear when you scroll to diff pages
+
+-- Refactor post mechanism to just be based on images; generate posts based on images?
