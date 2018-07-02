@@ -26,6 +26,6 @@ for panel_name in twigs_files:
         # create a markdown file in _posts
         panel_file = os.open(os.path.join(current_dir, "_posts", "2000-10-10-{0}-{1}.md".format(panel_num, panel_name)), os.O_RDWR|os.O_CREAT)
         # write post
-        os.write(panel_file, "---\nlayout: post\nimgurl: {0}\n---\n\n<div id=\"panel\"></div>[![Panel]({{{{ site.baseurl }}}} {{% link resources/twigs_panels/{0} %}})]({{{{page.previous.url}}}}#panel)".format(panel_name))
+        os.write(panel_file, "---\nlayout: post\nimgurl: {0}\n---\n\n[![Panel]({{{{ site.baseurl }}}} {{% link resources/twigs_panels/{0} %}})]({{{{page.previous.url}}}}#panel)".format(panel_name))
         os.close(panel_file)
 # run command jekyll serve in the current dir

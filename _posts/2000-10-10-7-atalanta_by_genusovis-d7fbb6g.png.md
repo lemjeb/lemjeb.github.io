@@ -3,4 +3,4 @@ layout: post
 imgurl: atalanta_by_genusovis-d7fbb6g.png
 ---
 
-<div id="panel"></div>[![Panel]({{ site.baseurl }} {% link resources/twigs_panels/atalanta_by_genusovis-d7fbb6g.png %})]({{page.previous.url}}#panel)
+[![Panel]({{ site.baseurl }} {% link resources/twigs_panels/atalanta_by_genusovis-d7fbb6g.png %})]({{page.previous.url}}#panel)
