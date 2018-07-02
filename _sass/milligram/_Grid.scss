@@ -21,17 +21,16 @@
 
 .post-container {
 	margin: 0 auto;
-	max-width: 80%;
+	max-width: 70%;
 	padding: 0 2.0rem;
 	position: relative;
-	width: 80%;
+	width: 70%;
 }
 
-@media (min-width: 40.0rem) { // Safari desktop has a bug using `rem`, but Safari mobile works
+@media only screen and (max-width: 600px) { // Safari desktop has a bug using `rem`, but Safari mobile works
 	.post-container {
 		margin: 0 auto;
 		max-width: 100%;
-		padding: 0 2.0rem;
 		position: relative;
 		width: 100%;
 	}
