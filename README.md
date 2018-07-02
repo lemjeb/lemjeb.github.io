@@ -7,6 +7,13 @@ HTML/CSS templates (Liquid) and Markdown with front matter and then Jekyll glues
 Another advantage of using Jekyll sites is free hosting of up to 1 GB with GitHub pages. When this repo is pushed to `https://github.com/lemjeb/lemjeb.github.io`,
 the changes are seen on the live site. 
 
+## How to Add Panels (The Short Version)
+
+1) Add the panel image to `resources/twigs_panels` (Make sure it's in order, maybe use a naming scheme like 'twigs_<panel_num>_blablawhateve')
+2) If you just want to test it out, run `submit_dev.py` and check the site out at `http://127.0.0.1:4000/`. Otherwise, run `submit_live.py` to push your changes to the live site. 
+
+Done!
+
 ## How To Develop on This Site
 
 ### Install Jekyll
