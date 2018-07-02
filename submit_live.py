@@ -19,5 +19,7 @@ for panel_name in twigs_files:
         os.write(panel_file, "---\nlayout: post\nimgurl: {0}\n---\n\n[![Panel]({{{{ site.baseurl }}}} {{% link resources/twigs_panels/{0} %}})]({{{{page.previous.url}}}}#panel)".format(panel_name))
         os.close(panel_file)
 
-# run command jekyll serve in the current dir
-_exit_code = subprocess.Popen(["jekyll", "serve"], cwd=current_dir).wait()
+# run commands to push to live repo
+_exit_code = subprocess.Popen(["git", "add", "."], cwd=current_dir).wait()
+_exit_code = subprocess.Popen(["git", "commit", "-m", "Adding new comic panels via script"], cwd=current_dir).wait()
+_exit_code = subprocess.Popen(["git", "push", "origin", "master"], cwd=current_dir).wait()

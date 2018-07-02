@@ -12,6 +12,12 @@ github_username:  lemjeb
 markdown: kramdown
 permalink: pretty
 
+# This snippet below exists so all comic panels can be accessed by Liquid like so:
+
+#    {% assign twigs_panels = site.static_files | where: "twigs_panel", true %}
+#    {% for panel in twigs_panels %}
+#      {{ panel.path }}
+#    {% endfor %}
 
 defaults:
   - scope:
