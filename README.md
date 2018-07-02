@@ -1,15 +1,14 @@
 # twigs site
-### contact jackcampbell@acm.org
 
-This site uses the ![Jekyll](https://jekyllrb.com/) static site generation engine. The idea is that all the assets of the site can be configured using
-HTML/CSS templates (Liquid) and Markdown with front matter and then Jekyll glues them together into a static website that can easily be hosted anywhere.
+This site uses the [Jekyll](https://jekyllrb.com/) static site generation engine. The idea is that all the assets of the site can be configured using
+HTML/CSS templates (Liquid) and Markdown with front matter and then Jekyll glues them together into a static website that can easily be hosted anywhere. The Jekyll docs are really good and should be able to tell you everything you need to know about itself, Github Pages hosting, Liquid templating, etc.
 
 Another advantage of using Jekyll sites is free hosting of up to 1 GB with GitHub pages. When this repo is pushed to `https://github.com/lemjeb/lemjeb.github.io`,
 the changes are seen on the live site. 
 
 ## How to Add Panels (The Short Version)
 
-1) Add the panel image to `resources/twigs_panels` (Make sure it's in order, maybe use a naming scheme like 'twigs_<panel_num>_blablawhateve')
+1) Add the panel image to `resources/twigs_panels` (Make sure it's in order, maybe use a naming scheme like 'twigs_<panel_num>_blablawhateve.jpg')
 2) If you just want to test it out, run `submit_dev.py` and check the site out at `http://127.0.0.1:4000/`. Otherwise, run `submit_live.py` to push your changes to the live site. 
 
 Done!
@@ -19,9 +18,11 @@ Done!
 ### Install Jekyll
 First, you'll need to set up Jekyll on your machine. Go check out that webpage, though if you already have Ruby, these might be all the commands you need:
 
-`gem install bundler jekyll`
-`cd lemjeb.github.io`
-`jekyll serve`
+```
+gem install bundler jekyll
+cd lemjeb.github.io
+jekyll serve
+```
 
 And open `http://127.0.0.1:4000/` in a web browser.
 
@@ -43,3 +44,5 @@ If things start to get hand and you need to host the site elsewhere, you might w
 
 Unfortunately, a security related drawback of Github Pages is that Jekyll plugins cannot be used live. So keep in mind that if you do want to use those plugins, 
 you'll have to generate the site locally and then push the `_site` directory (the generated static site) to Github or wherever your new hosting location is. 
+
+### contact jackcampbell@acm.org for q's etc
