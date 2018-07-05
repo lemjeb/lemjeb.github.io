@@ -5,4 +5,7 @@
 
 -- sort out panel size. Too big? too small on mob?
 
--- write scripts and documentation
+-- chapters!
+   - organize comics n chapters n pages
+   - comic_name/chapter_name/page_in_order
+   - floating sidebar (first pass, generate toc at top with working links. then make it pretty and float)
