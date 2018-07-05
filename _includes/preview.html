@@ -1,9 +1,10 @@
 <div class="post-container">
+<div id="toc"></div>
 {% for post in site.posts %}
   <div class="row">
         <div class="column column-100">
             <div class="preview-panel">
-                <div id="chapter{{ post.chapter }}.page{{ post.page }}" class="pagemarker"></div>
+                <div id="{{ post.chapter }}-{{ post.page }}" class="pagemarker"></div>
                 <a href="{{ post.url | prepend: site.baseurl }}#panel">
                     <img src="resources/chapters/{{ post.imgurl | prepend: site.baseurl }}" width="100%" height="100%">
                 </a>
@@ -13,3 +14,31 @@
 {% endfor %}
 {% cycle 'end row' : '', '</div>', '</div>' %}
 </div>
+
+<style>
+#toc{
+    background:lightgray;
+    width:5%;
+    height:50%;
+    position:fixed;
+    top:50px;
+    left:0;
+    overflow: scroll;
+}
+</style>
+
+<script>
+    var markers = document.getElementsByClassName("pagemarker");
+    for(var i = 0; i < markers.length; i++)
+    {
+        markers[i]
+        var a = document.createElement('a');
+        var linkText = document.createTextNode(markers[i].id);
+        a.appendChild(linkText);
+        a.title = markers[i].id;
+        a.href = "#"+markers[i].id;
+        document.getElementById("toc").appendChild(a);
+        var a = document.createElement('br');
+        document.getElementById("toc").appendChild(a);
+    }
+</script>

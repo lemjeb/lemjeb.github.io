@@ -5,6 +5,6 @@
 
 -- sort out panel size. Too big? too small on mob?
 
--- chapters!
-   - floating sidebar (first pass, generate toc at top with working links. then make it pretty and float)
-   - archive page: a list of links to chapters that expand to show a list of links to pages
+-- polish floating sidebar aesthetics
+
+-- polish archive page aesthetics
