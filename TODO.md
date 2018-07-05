@@ -6,6 +6,5 @@
 -- sort out panel size. Too big? too small on mob?
 
 -- chapters!
-   - organize comics n chapters n pages
-   - comic_name/chapter_name/page_in_order
    - floating sidebar (first pass, generate toc at top with working links. then make it pretty and float)
+   - archive page: a list of links to chapters that expand to show a list of links to pages

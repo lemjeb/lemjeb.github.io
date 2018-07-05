@@ -1,7 +1,9 @@
 ---
 layout: post
 imgurl: chapter1/atalanta_by_genusovis-d7fbb6g.png
-panelnum: 23
+num: 23
+chapter: 1
+page: 1
 ---
 
 [![Panel]({{ site.baseurl }} {% link resources/chapters/chapter1/atalanta_by_genusovis-d7fbb6g.png %})]({{page.previous.url}}#panel)

@@ -1,0 +1,14 @@
+<div class="post-container">
+    {% for post in site.posts %}
+      <div class="row">
+            <div class="column column-100">
+                <div class="preview-panel">
+                    <a href="{{ post.url | site.baseurl }}#panel">
+                        {{post.chapter}}.{{post.page}}
+                    </a>
+               </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% cycle 'end row' : '', '</div>', '</div>' %}
+    </div>

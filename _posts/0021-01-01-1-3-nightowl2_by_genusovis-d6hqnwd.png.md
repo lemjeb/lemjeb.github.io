@@ -1,7 +1,9 @@
 ---
 layout: post
 imgurl: chapter1/nightowl2_by_genusovis-d6hqnwd.png
-panelnum: 21
+num: 21
+chapter: 1
+page: 3
 ---
 
 [![Panel]({{ site.baseurl }} {% link resources/chapters/chapter1/nightowl2_by_genusovis-d6hqnwd.png %})]({{page.previous.url}}#panel)
