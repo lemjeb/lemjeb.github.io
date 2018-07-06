@@ -1,6 +1,12 @@
 <div class="post-container">
+        <button data-toggle="collapse" data-target="#demo">Collapsible</button>
+
+        <div id="demo" class="collapse">
+            butt
+            </div>
+        
     {% for post in site.posts %}
-      <div class="row">
+      <center><div class="row">
             <div class="column column-100">
                 <div class="preview-panel">
                     <a href="{{ post.url | site.baseurl }}#panel">
@@ -8,7 +14,8 @@
                     </a>
                </div>
             </div>
-        </div>
+        </div></center>
     {% endfor %}
     {% cycle 'end row' : '', '</div>', '</div>' %}
+
     </div>

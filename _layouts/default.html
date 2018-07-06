@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   {% include head.html %}
-
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="150">
 
     <main class="wrapper">
-      
+        <nav class="col-sm-3" id="toc" style="overflow:scroll; max-height: 50%; position:fixed; z-index: 9999;">
+            <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-bottom="20%" id="toc-list" style="overflow:scroll; max-height: 80%;">
+            </ul>
+    </nav>
       {% include header.html %}
 
       <div class="container">

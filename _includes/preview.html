@@ -1,5 +1,9 @@
+<nav class="col-sm-3" id="toc" style="overflow:scroll; max-height: 50%;">
+        <ul class="nav nav-pills nav-stacked" data-spy="affix" id="toc-list" style="overflow:scroll; max-height: 50%;">
+        </ul>
+</nav>
+
 <div class="post-container">
-<div id="toc"></div>
 {% for post in site.posts %}
   <div class="row">
         <div class="column column-100">
@@ -15,8 +19,10 @@
 {% cycle 'end row' : '', '</div>', '</div>' %}
 </div>
 
+
+
 <style>
-#toc{
+/* #toc{
     background:lightgray;
     width:5%;
     height:50%;
@@ -24,21 +30,21 @@
     top:50px;
     left:0;
     overflow: scroll;
-}
+} */
 </style>
 
 <script>
     var markers = document.getElementsByClassName("pagemarker");
     for(var i = 0; i < markers.length; i++)
     {
-        markers[i]
+        var li = document.createElement('li');
         var a = document.createElement('a');
         var linkText = document.createTextNode(markers[i].id);
         a.appendChild(linkText);
         a.title = markers[i].id;
         a.href = "#"+markers[i].id;
-        document.getElementById("toc").appendChild(a);
-        var a = document.createElement('br');
-        document.getElementById("toc").appendChild(a);
+        li.appendChild(a);
+        document.getElementById("toc-list").appendChild(li);
     }
 </script>
+
