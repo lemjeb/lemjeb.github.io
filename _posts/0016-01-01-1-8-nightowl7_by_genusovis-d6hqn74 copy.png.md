@@ -6,4 +6,4 @@ chapter: 1
 page: 8
 ---
 
-[![Panel]({{ site.baseurl }} {% link resources/chapters/chapter1/nightowl7_by_genusovis-d6hqn74 copy.png %})]({{page.previous.url}}#panel)
+[![Panel]({{ site.baseurl }} {% link resources/chapters/chapter1/nightowl7_by_genusovis-d6hqn74 copy.png %}){: class="img-responsive"}]({{page.previous.url}}#panel)

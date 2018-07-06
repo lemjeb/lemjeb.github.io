@@ -32,6 +32,6 @@ def generate():
                 # create a markdown file in _posts
                 panel_file = os.open(os.path.join(current_dir, "_posts", "{0}-01-01-{1}-{2}-{3}.md".format(str(overall_panel_num).zfill(4), chapter_num, panel_num, panel_name)), os.O_RDWR|os.O_CREAT)
                 # write post
-                os.write(panel_file, "---\nlayout: post\nimgurl: {0}/{1}\nnum: {2}\nchapter: {3}\npage: {4}\n---\n\n[![Panel]({{{{ site.baseurl }}}} {{% link resources/chapters/{0}/{1} %}})]({{{{page.previous.url}}}}#panel)".format(chapter, panel_name, overall_panel_num, chapter_num, panel_num))
+                os.write(panel_file, "---\nlayout: post\nimgurl: {0}/{1}\nnum: {2}\nchapter: {3}\npage: {4}\n---\n\n[![Panel]({{{{ site.baseurl }}}} {{% link resources/chapters/{0}/{1} %}}){{: class=\"img-responsive\"}}]({{{{page.previous.url}}}}#panel)".format(chapter, panel_name, overall_panel_num, chapter_num, panel_num))
                 os.close(panel_file)
                 overall_panel_num -= 1

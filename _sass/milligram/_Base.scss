@@ -33,3 +33,7 @@ body {
 	letter-spacing: .01em;
 	line-height: 1.6;
 }
+
+li.active {
+	background-color: rgba(0, 0, 0, 0.11);
+}

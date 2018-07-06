@@ -1,23 +1,30 @@
-<div class="post-container">
-        <button data-toggle="collapse" data-target="#demo">Collapsible</button>
+<div class="archive-container">
+        <!-- <button id="page-expander{{post.chapter}}" data-toggle="collapse" data-target=".chapter{{post.chapter}}">Collapsible</button>
 
-        <div id="demo" class="collapse">
+        <div id="2" class="collapse">
             butt
-            </div>
-        
+            </div> -->
+    <center><div id="chapter-buttons"></div></center>
+    {% assign oldChapter = "1" %}
     {% for post in site.posts %}
-      <center><div class="row">
-            <div class="column column-100">
-                <div class="preview-panel">
-                    <a href="{{ post.url | site.baseurl }}#panel">
-                        {{post.chapter}}.{{post.page}}
-                    </a>
-               </div>
-            </div>
-        </div></center>
+    <center>
+        <div class="collapse chapter{{post.chapter}}"><a href="{{ post.url | site.baseurl }}#panel">.{{post.page}}</a></div>
+    </center>
+    <script>
+        pageExpander = document.getElementById("page-expander{{post.chapter}}");
+        if(pageExpander == undefined)
+        {
+            pageExpander = document.createElement('a');
+            pageExpander.id = "page-expander{{post.chapter}}";
+            pageExpander.setAttribute("data-toggle", "collapse");
+            pageExpander.setAttribute("data-target", ".chapter{{post.chapter}}");
+            pageExpander.href = "#";
+            pageExpander.innerHTML = "Chapter {{ post.chapter }}";
+            document.getElementById("chapter-buttons").appendChild(pageExpander);
+        };
+    </script>
     {% endfor %}
-    {% cycle 'end row' : '', '</div>', '</div>' %}
 
-    </div>
+</div>
 
     
