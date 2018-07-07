@@ -1,0 +1,50 @@
+---
+layout: default
+title: archive
+permalink: /archive/
+---
+
+
+<div class="archive-container" style="overflow:scroll;">
+
+        <div id="chapter-buttons" style="z-index: 9999;">
+                <nav class="col-sm-3" id="archive">
+                        <ul class="nav flex-column" id="chapter-button-list">
+                        </ul>
+                </nav>
+        </div>
+
+    {% for post in site.posts %}
+    <script>
+        chapterButtonHolder = document.getElementById("chapter{{post.chapter}}button");
+        if(chapterButtonHolder == undefined)
+        {
+            chapterButtonHolder = document.createElement('div');
+            chapterButtonHolder.id = "chapter{{post.chapter}}button";
+            chapterButtonHolder.setAttribute("class", "btn-group dropright");
+
+            chapterButton = document.createElement('button');
+            chapterButton.innerHTML = "chapter {{post.chapter}}";
+            chapterButton.setAttribute("class", "btn btn-secondary dropdown-toggle");
+            chapterButton.setAttribute("type", "button");
+            chapterButton.setAttribute("data-toggle", "dropdown");
+            // chapterButton.setAttribute("aria-haspopup", "true");
+            // chapterButton.setAttribute("aria-expanded", "false");
+
+            chapterLinks = document.createElement('div');
+            chapterLinks.setAttribute('id', "chapter{{post.chapter}}links");
+            chapterLinks.setAttribute('class', 'dropdown-menu');
+
+            chapterButtonHolder.appendChild(chapterLinks);
+            chapterButtonHolder.appendChild(chapterButton);
+            document.getElementById("chapter-button-list").appendChild(chapterButtonHolder);
+        };
+        chapterLink = document.createElement('a');
+        chapterLink.className = "dropdown-item";
+        chapterLink.href = "{{ post.url | prepend: site.baseurl }}#panel";
+        chapterLink.innerHTML = "Page {{post.page}}";
+        document.getElementById("chapter{{post.chapter}}links").appendChild(chapterLink);
+    </script>
+    {% endfor %}
+
+</div>
