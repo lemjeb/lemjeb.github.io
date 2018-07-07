@@ -4,12 +4,24 @@
         <div id="2" class="collapse">
             butt
             </div> -->
-    <center><div id="chapter-buttons"></div></center>
+
+
+            <div class="row">
+                    <div class="column" id="chapter-column">
+
+                    </div>
+                    <div class="column" id="page-column1">
+
+                    </div>
+                    <div class="column" id="page-column2">
+
+                        </div>
+            </div>
     {% assign oldChapter = "1" %}
     {% for post in site.posts %}
-    <center>
+    <!-- <center>
         <div class="collapse chapter{{post.chapter}}"><a href="{{ post.url | site.baseurl }}#panel">.{{post.page}}</a></div>
-    </center>
+    </center> -->
     <script>
         pageExpander = document.getElementById("page-expander{{post.chapter}}");
         if(pageExpander == undefined)
@@ -20,8 +32,17 @@
             pageExpander.setAttribute("data-target", ".chapter{{post.chapter}}");
             pageExpander.href = "#";
             pageExpander.innerHTML = "Chapter {{ post.chapter }}";
-            document.getElementById("chapter-buttons").appendChild(pageExpander);
+            document.getElementById("chapter-column").appendChild(pageExpander);
         };
+        
+        pageCollapse = document.createElement("div");
+        pageCollapse.className = "collapse chapter{{post.chapter}}";
+        pageLink = document.createElement("a");
+        pageLink.innerHTML = "{{post.page}}";
+        pageLink.href = "{{ post.url | site.baseurl }}#panel";
+        pageCollapse.appendChild(pageLink);
+        document.getElementById("page-column{{post.chapter}}").appendChild(pageCollapse);
+
     </script>
     {% endfor %}
 
