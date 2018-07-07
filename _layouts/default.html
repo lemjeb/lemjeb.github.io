@@ -10,14 +10,14 @@
   {% include head.html %}
   <body data-spy="scroll" data-target="#toc" data-offset="150">
       <main class="wrapper">
-          <nav class="col-sm-3" id="toc" style="overflow:scroll; max-height: 10%; position:fixed; z-index: 9999; top:20%; bottom:20%;">
-              <ul class="nav flex-column" data-spy="affix" id="toc-list" style="overflow:scroll; max-height: 50%; position:fixed; z-index: 9999; top:20%; bottom:20%;">
-              </ul>
-      </nav>
+          
 
       {% include header.html %}
 
-
+      <nav class="col-sm-3" id="toc" style="overflow:scroll; float:left; z-index: 9999;">
+          <ul class="nav flex-column" data-spy="affix" id="toc-list" style="overflow:scroll; max-height: 50%; z-index: 9999; top:20%; bottom:20%;">
+          </ul>
+  </nav>
       <div class="container">
         {{ content }}
         <script>
@@ -29,7 +29,6 @@
         </script>
         {% include footer.html %}
       </div>
-
 
     </main>
     
