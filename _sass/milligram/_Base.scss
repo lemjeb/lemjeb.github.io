@@ -34,6 +34,23 @@ body {
 	line-height: 1.6;
 }
 
-li.active {
-	background-color: rgba(0, 0, 0, 0.11);
+#toc-list {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 1.1rem;
+	font-weight: 700;
+}
+
+#toc-list .active {
+	font-size: 1.6rem;
+}
+
+.nav.flex-column#toc-list {
+	height: 50%;
+	width: 75px;
+	background-color: rgb(0, 0, 0);
+	border-radius: 10px;
+	margin-bottom: 30px;
+	left: -10px;
+	float: left;
+	position: fixed;
 }

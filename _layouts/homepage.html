@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  {% include head.html %}
+  <body data-spy="scroll" data-target="#toc">
+      <main class="wrapper">
+          
+
+      {% include header.html %}
+
+      <nav class="sticky-top col-sm-3" data-offset-top="197" id="toc" style="overflow:scroll; max-height: 50%; float:left; z-index: 9999; display:none;">
+          <ul class="nav flex-column" data-spy="affix" id="toc-list" style="overflow:scroll; max-height: 100%; z-index: 9999; top:20%; bottom:20%;">
+          </ul>
+  </nav>
+
+      <div class="container">
+          
+        {{ content }}
+        <script>
+            $('[data-spy="scroll"]').on('activate.bs.scrollspy', function (ev) {
+              if(ev.target.id == 'markerTOP')
+              {
+                $('#toc').hide();
+              }
+              else{
+                $('#toc').show();
+              }
+              objDiv = document.getElementById("toc");
+              objDiv.scrollTop = objDiv.scrollHeight;
+            })
+        </script>
+        {% include footer.html %}
+      </div>
+
+    </main>
+    
+  </body>
+
+</html>
